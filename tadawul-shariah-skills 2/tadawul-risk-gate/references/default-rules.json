@@ -1,0 +1,53 @@
+{
+  "rule_set_version": "1.0",
+  "last_updated": "2026-04-21",
+  "description": "Default risk rules for Tadawul paper trading experiment. Copy this file to 'risk_rules.json' in your working directory to customize.",
+
+  "sizing": {
+    "max_risk_per_trade_pct": 1.0,
+    "max_position_pct_blue_chip": 15.0,
+    "max_position_pct_mid_cap": 8.0,
+    "max_position_pct_small_cap": 5.0,
+    "max_position_pct_nomu": 3.0
+  },
+
+  "concentration": {
+    "max_sector_pct": 30.0,
+    "max_combined_energy_petchem_pct": 40.0,
+    "max_top_5_concentration_pct": 50.0,
+    "min_cash_floor_pct": 10.0,
+    "max_position_count": 15,
+    "min_position_count_warning": 5
+  },
+
+  "loss_limits": {
+    "max_daily_loss_pct": 3.0,
+    "max_weekly_loss_pct": 6.0,
+    "max_monthly_loss_pct": 10.0
+  },
+
+  "liquidity": {
+    "max_pct_of_avg_daily_volume": 10.0,
+    "min_avg_daily_value_sar": 500000
+  },
+
+  "market_mechanics": {
+    "stop_must_be_inside_daily_limit": true,
+    "main_market_daily_limit_pct": 10.0,
+    "nomu_daily_limit_pct": 30.0,
+    "enforce_tick_alignment": true
+  },
+
+  "shariah": {
+    "shariah_status_max_age_days": 7,
+    "non_compliant_block": true,
+    "doubtful_warn_only": true,
+    "require_source_in_journal": true
+  },
+
+  "execution": {
+    "allow_market_orders": false,
+    "prefer_limit_orders": true,
+    "warn_on_weekend_hold_for_volatile_sectors": true
+  }
+}
